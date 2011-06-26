@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>groupplayer</title>
+<script type="text/javascript" charset="utf-8" src="js/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/backbone.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/mustache.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/ICanHaz.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/groupplayer.js"></script>
+<link rel="stylesheet" href="css/reset.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+<script id="room_template" type="text/html">
+<div id="room">
+	<h1>{{title}}</h1>
+	<div id="viewer">
+		
+	</div>
+	<ul id="users">
+	</ul>
+	<ul id="queue">
+	</ul>
+	<div id="messages">
+		
+	</div>
+</div>
+</script>
+
+<script id="user_template" type="text/html"> 
+<li id="{{ gid }}">{{name}}</li>
+</script>
+
+<script id="link_template" type="text/html"> 
+<li id="{{ gid }}">{{title}}</li>
+</script>
+
+<script type="text/javascript" charset="utf-8">
+	init = function(){
+		var room, room_data;
+		room_data = {title:'room_title'};
+		room = ich.room_template(room_data);
+		$('body').append(room);
+	}
+</script>
+</head>
+<body id="body" onload="init();">
+</body>
