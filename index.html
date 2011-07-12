@@ -7,22 +7,35 @@
 <script type="text/javascript" charset="utf-8" src="js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/mustache.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/ICanHaz.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/groupplayer.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/gp_models.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/gp_views.js"></script>
 <link rel="stylesheet" href="css/reset.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
 <script id="room_template" type="text/html">
 <div id="room">
-	<h1>{{title}}</h1>
-	<div id="viewer">
-		
+	<div id="bar">
+	<h1 class="room_title">{{title}}</h1>
+
+		<ul id="users">
+		</ul>
+		<div id="queue">
+			<ul>
+			</ul>
+			<div id="add_link">
+				<form accept-charset="utf-8" action="javascript:new_link($('#new_link_url').val(),$('#new_link_title').val());">
+					<label for="url">URL:</label><input type="text/submit/hidden/button" name="url" id="new_link_url" placeholder="http://..."><br />
+					<label for="link_title">TITLE:</label><input type="text/submit/hidden/button" name="title" id="new_link_title">
+	<input type="submit" value="add link">
+				</form>
+			</div>
+		</div>
+		<div id="messages">
+
+		</div>
 	</div>
-	<ul id="users">
-	</ul>
-	<ul id="queue">
-	</ul>
-	<div id="messages">
-		
+	<div id="viewer">
+		<iframe src="{{url}}" id="ifr"></iframe>
 	</div>
 </div>
 </script>
@@ -38,9 +51,13 @@
 <script type="text/javascript" charset="utf-8">
 	init = function(){
 		var room, room_data;
-		room_data = {title:'room_title'};
+		room_data = {title:'Vimeo',url:'http://player.vimeo.com/video/24380624?api=1'};
 		room = ich.room_template(room_data);
 		$('body').append(room);
+	}
+	new_link = function(title,url){
+		link = new gp_models.link({title:title,url:url});
+		console.warn(link);
 	}
 </script>
 </head>
