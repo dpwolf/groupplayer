@@ -2,13 +2,13 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>groupplayer</title>
-<script type="text/javascript" charset="utf-8" src="js/underscore.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/backbone.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/jquery-1.6.1.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/mustache.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/ICanHaz.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/gp_models.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/gp_views.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/underscore.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/backbone.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/mustache.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/ICanHaz.js"></script>
+<script type="text/javascript" charset="utf-8" src="models/gp_models.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/gp_views.js"></script>
 <link rel="stylesheet" href="css/reset.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
@@ -52,6 +52,7 @@
 	init = function(){
 		var room, room_data;
 		room_data = {title:'Vimeo',url:'http://player.vimeo.com/video/24380624?api=1'};
+		// room_data = {title:'Apple',url:'http://www.apple.com'};
 		room = ich.room_template(room_data);
 		$('body').append(room);
 	}

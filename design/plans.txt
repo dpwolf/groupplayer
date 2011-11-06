@@ -1,0 +1,51 @@
+Like turntable.fm for links and videos
+
+users can log in by choosing a username
+    # users can log in, creating a user/email/pass combo
+    # users can log in with twitter or an email/password combo
+
+users arrive in the default room
+    # users can create or choose a room
+    # users can see a list of currently active rooms
+    # users can enter a name and add a new room
+
+    # users can invite people to to the room
+    # users can share the room link on twitter
+
+when they enter a room:
+    users can view the currently playing link & who selected it
+    users can view a list of who else is in the room (crowd)
+    users can see a list of who else is 'vjing' (in order)
+
+users can add a link to their queue by entering it's url in a form
+    # users can re-order their queue
+    # users can add a link to their queue via a bookmarklet
+    # users can add a bookmarklet to their toolbar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
